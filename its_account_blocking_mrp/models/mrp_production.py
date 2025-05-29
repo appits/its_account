@@ -4,8 +4,6 @@ from odoo.exceptions import ValidationError, UserError
 class MrpProduction(models.Model):
     _inherit = 'mrp.production'
 
-
-    # TODO arreglar
     def action_confirm(self):
 
         mp_products = []

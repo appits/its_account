@@ -1,0 +1,32 @@
+Para obtener información sobre los derechos de autor, 
+consulte el archivo COPYRIGHT.
+
+Los módulos MITS se publica bajo la Licencia de Modulos MITS v1.0,
+que se incluye a continuación.
+
+********************************************************************************
+
+Licencia de Módulos MITS v1.0
+Copyright (C) 2021 IT Sales C.A.
+
+Este módulo y los archivos asociados (el "Software") solo se pueden usar (ejecutar,
+modificado, ejecutado después de modificaciones) con un Acuerdo de Suscripción Vigente
+con IT Sales C.A.
+
+Con un Acuerdo de Suscripción Vigente con IT Sales C.A., los permisos anteriores
+también se conceden, mientres el acuerdo este vigente, siempre que el uso se limite
+a un ambiente de prueba o desarrollo.
+
+Está prohibido publicar, distribuir, sublicenciar o vender copias del Software
+o copias modificadas del Software.
+
+El aviso de derechos de autor anterior y este aviso de permiso deben incluirse 
+en todas las copias o partes sustanciales del Software.
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O
+IMPLÍCITA, INCLUYENDO PERO NO LIMITADO, A LAS GARANTÍAS DE COMERCIABILIDAD,
+IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO VIOLACIÓN. EN NINGÚN CASO LOS AUTORES 
+O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES DE CUALQUIER RECLAMACIÓN, 
+DAÑOS U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE 
+OTRA FORMA, DERIVADOS DE O EN CONEXIÓN CON EL SOFTWARE  O EL USO U OTRO 
+TRATAMIENTOS EN EL SOFTWARE.
