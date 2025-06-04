@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="po_inherit_analytic" model="ir.ui.view">
-        <field name="name">purchase.order.analytic.dynamic</field>
-        <field name="model">purchase.order</field>
-        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+    <record id="account_reconcile_model_inherit_analytic" model="ir.ui.view">
+        <field name="name">account.reconcile.model.analytic.dynamic</field>
+        <field name="model">account.reconcile.model</field>
+        <field name="inherit_id" ref="account.view_account_reconcile_model_form"/>
         <field name="arch" type="xml">
 
             <xpath expr="//tree" position="inside">
@@ -11,9 +11,9 @@
                     <field name="allowed_analytic_tag_ids" invisible="1"/>
             </xpath>
 
-            <xpath expr="//tree//field[@name='account_analytic_id']" position="attributes">
+            <xpath expr="//tree//field[@name='analytic_account_id']" position="attributes">
                 <attribute name="domain">
-                    ['|', ('company_id', '=', False), ('company_id', '=', parent.company_id), ('id','in', allowed_analytic_account_ids)]
+                    [('id','in', allowed_analytic_account_ids)]
                 </attribute>
                 <attribute name="options">
                     {'no_create': True, 'no_edit': True}
@@ -21,7 +21,7 @@
             </xpath>
             <xpath expr="//tree//field[@name='analytic_tag_ids']" position="attributes">
                 <attribute name="domain">
-                    ['|', ('company_id', '=', False), ('company_id', '=', parent.company_id), ('id','in', allowed_analytic_tag_ids)]
+                    [('company_id', 'in', [company_id, False]), ('id','in', allowed_analytic_tag_ids)]
                 </attribute>
                 <attribute name="options">
                     {'no_create': True, 'no_edit': True}

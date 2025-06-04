@@ -1,28 +1,17 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError, UserError
 
-class SaleOrder(models.Model):
+class PurchaseOrder(models.Model):
 
-    _inherit = 'sale.order'
-
-    allowed_analytic_account_ids = fields.Many2many(
-        'account.analytic.account',
-        string='Cuentas Analíticas Permitidas',
-        compute='_compute_allowed_analytic',
-        store=False,
-    )
+    _inherit = 'purchase.order'
 
 
-    @api.depends('order_line.product_id')
-    def _compute_allowed_analytic(self):
-        for order in self:
-            order.allowed_analytic_account_ids = order.order_line.mapped('allowed_analytic_account_ids')
+    def button_confirm(self):
 
-    def action_confirm(self):
-        for sale in self:
-            sale._check_move_analytic_constraints()
+        for purchase in self:
+            purchase._check_move_analytic_constraints()
 
-        return super(SaleOrder, self).action_confirm()
+        return super(self).button_confirm()
 
 
     def _check_move_analytic_constraints(self):
@@ -47,3 +36,4 @@ class SaleOrder(models.Model):
                 raise ValidationError(
                     _("Las etiquetas analíticas '%s' no están permitidas para este movimiento.") % ', '.join(line.analytic_tag_ids.mapped('name'))
                 )
+

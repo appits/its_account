@@ -10,6 +10,7 @@
     'depends': ['base','account','its_account_analytic'],
     # Always loaded
     'data': [
+        'views/account_move_views.xml'
     ],
     'license': 'Other proprietary',
 }

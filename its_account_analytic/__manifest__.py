@@ -13,7 +13,6 @@
         # Views
         'views/account_account_views.xml',
         'views/account_analytic_account_views.xml',
-        'views/res_config_settings.xml',
     ],
     'license': 'Other proprietary',
 }
